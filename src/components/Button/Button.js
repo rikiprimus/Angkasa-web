@@ -1,6 +1,6 @@
 "use client"
-import { useState } from 'react'
-import {ThreeDot } from 'react-loading-indicators';
+import { useState } from "react"
+import {ThreeDot } from "react-loading-indicators";
 
 const Button = ({onClick, children}) => {
   const [loading, setLoading] = useState(false);
@@ -17,7 +17,7 @@ const Button = ({onClick, children}) => {
       onClick={doSomething}
     >
       {loading ? (
-        <ThreeDot variant="pulsate" color="#fff" size='small'/>
+        <ThreeDot variant="pulsate" color="#fff" size="small"/>
       ) : (
         children
       )}

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import VerifOTPForm from '@/components/Form/verifOTPForm';
+import VerifOTPForm from "@/components/Form/verifOTPForm";
 
 const Verification = () => {
   return (

@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import {ThreeDot } from 'react-loading-indicators';
-import Link from 'next/link';
+import { useState } from "react"
+import {ThreeDot } from "react-loading-indicators";
+import Link from "next/link";
 
 const ButtonBorder = ({href, children}) => {
   const [loading, setLoading] = useState(false);
@@ -17,7 +17,7 @@ const ButtonBorder = ({href, children}) => {
       href={href}
     >
       {loading ? (
-        <ThreeDot variant="pulsate" color="#2395FF" size='small'/>
+        <ThreeDot variant="pulsate" color="#2395FF" size="small"/>
       ) : (
         children
       )}

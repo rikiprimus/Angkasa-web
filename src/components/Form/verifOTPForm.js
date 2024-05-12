@@ -1,9 +1,9 @@
 "use client";
-import Button from '../Button/Button';
+import Button from "../Button/Button";
 
 const verifOTPForm = () => {
   return (
-    <div className='flex flex-col gap-6'>
+    <div className="flex flex-col gap-6">
       <form className="flex flex-col gap-5">
         <h1 className="font-poppins font-bold text-4xl">Verifikasi Otp</h1>
         <input
@@ -17,7 +17,7 @@ const verifOTPForm = () => {
           // onChange = ""
         />
       </form>
-      <Button onClick='' >Send</Button>
+      <Button onClick="" >Send</Button>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 const PaymentInput = ({ label, type, value, onChange, placeholder, maxLength, icon }) => {
   return (

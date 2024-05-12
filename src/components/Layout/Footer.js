@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <div className='flex flex-col gap-10 p-7 md:px-20 md:py-10'>
+    <div className="flex flex-col gap-10 p-7 md:px-20 md:py-10">
       {/* flex 1  */}
       <div className="flex flex-col gap-10 md:flex-row justify-between">
         {/* flex 1.1  */}
@@ -27,10 +27,10 @@ const Footer = () => {
         <div className="flex flex-col gap-6">
           <h1 className="font-bold text-lg">Features</h1>
           <div className="flex flex-row justify-between md:flex-col gap-3">
-            <Link href='/' className="active:opacity-50">Find Ticket</Link>
-            <Link href='/'>My Booking</Link>
-            <Link href='/'>Chat</Link>
-            <Link href='/'>Notification</Link>
+            <Link href="/" className="active:opacity-50">Find Ticket</Link>
+            <Link href="/">My Booking</Link>
+            <Link href="/">Chat</Link>
+            <Link href="/">Notification</Link>
           </div>
         </div>
         {/* flex 1.3  */}
@@ -66,7 +66,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='flex flex-col-reverse gap-2 md:flex-row justify-between'>
+      <div className="flex flex-col-reverse gap-2 md:flex-row justify-between">
         {/* flex 2  */}
         <p>© Ankasa.  All Rights Reserved.</p>
         <div className="flex items-center gap-3 text-textInput">

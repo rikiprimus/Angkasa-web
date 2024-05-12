@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "../Button/Button";
 import { IoIosSearch, bar } from "react-icons/io";
 import { FiAlignLeft, FiX } from "react-icons/fi";
-import { usePathname } from 'next/navigation'
+import { usePathname } from "next/navigation"
 import { useState } from "react";
 
 const Navbar = () => {
@@ -32,17 +32,17 @@ const Navbar = () => {
         <div className="flex items-start gap-8">
           <div className="flex items-center bg-boxInput rounded-lg px-4 py-2">
             <IoIosSearch size={25} color="#6B6B6B" />
-            <input type='text' placeholder="Where you want to go?" className="bg-boxInput text-textInput p-2 focus:outline-none" />
+            <input type="text" placeholder="Where you want to go?" className="bg-boxInput text-textInput p-2 focus:outline-none" />
           </div>
-          <Link href='/' className="flex flex-col items-center">
+          <Link href="/" className="flex flex-col items-center">
             <p className="font-semibold text-lg p-4">Find Ticket</p>
-            {pathname === '/' ? (
+            {pathname === "/" ? (
               <div className="w-8 h-1 rounded-full bg-primary"></div>
             ) : null}
           </Link>
-          <Link href='/' className="flex flex-col items-center">
+          <Link href="/" className="flex flex-col items-center">
             <p className="font-semibold text-lg p-4">My Booking</p>
-            {pathname === '/my-booking' ? (
+            {pathname === "/my-booking" ? (
               <div className="w-8 h-1 rounded-full bg-primary"></div>
             ) : null}
           </Link>
@@ -78,17 +78,17 @@ const Navbar = () => {
           <div className="w-full flex flex-col items-start gap-8 mt-10">
             <div className="w-full flex items-center bg-boxInput rounded-lg px-4 py-2">
               <IoIosSearch size={25} color="#6B6B6B" />
-              <input type='text' placeholder="Where you want to go?" className="w-full bg-boxInput text-textInput p-2 focus:outline-none" />
+              <input type="text" placeholder="Where you want to go?" className="w-full bg-boxInput text-textInput p-2 focus:outline-none" />
             </div>
-            <Link href='/' className="w-full flex flex-col items-center">
+            <Link href="/" className="w-full flex flex-col items-center">
               <p className="font-semibold text-lg p-4">Find Ticket</p>
-              {pathname === '/' ? (
+              {pathname === "/" ? (
                 <div className="w-8 h-1 rounded-full bg-primary"></div>
               ) : null}
             </Link>
-            <Link href='/' className="w-full flex flex-col items-center">
+            <Link href="/" className="w-full flex flex-col items-center">
               <p className="font-semibold text-lg p-4">My Booking</p>
-              {pathname === '/my-booking' ? (
+              {pathname === "/my-booking" ? (
                 <div className="w-8 h-1 rounded-full bg-primary"></div>
               ) : null}
             </Link>

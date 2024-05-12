@@ -46,7 +46,7 @@ const CardFilter = () => {
           content={contentItem()}
           icon={<IoIosArrowUp />}
           isOpen={openIndex === 1}
-          color='white'
+          color="white"
           onClick={() => handleItemClick(1)}
         />
         <AccordionItem
@@ -54,7 +54,7 @@ const CardFilter = () => {
           content={contentItem()}
           icon={<IoIosArrowUp />}
           isOpen={openIndex === 1}
-          color='white'
+          color="white"
           onClick={() => handleItemClick(1)}
         />
         <AccordionItem
@@ -62,7 +62,7 @@ const CardFilter = () => {
           content={contentItem()}
           icon={<IoIosArrowUp />}
           isOpen={openIndex === 1}
-          color='white'
+          color="white"
           onClick={() => handleItemClick(1)}
         />
         <AccordionItem
@@ -70,7 +70,7 @@ const CardFilter = () => {
           content={contentItem()}
           icon={<IoIosArrowUp />}
           isOpen={openIndex === 1}
-          color='white'
+          color="white"
           onClick={() => handleItemClick(1)}
         />
         <AccordionItem
@@ -78,7 +78,7 @@ const CardFilter = () => {
           content={contentItem()}
           icon={<IoIosArrowUp />}
           isOpen={openIndex === 1}
-          color='white'
+          color="white"
           onClick={() => handleItemClick(1)}
         />
         <AccordionItem
@@ -86,7 +86,7 @@ const CardFilter = () => {
           content={contentItem()}
           icon={<IoIosArrowUp />}
           isOpen={openIndex === 1}
-          color='white'
+          color="white"
           onClick={() => handleItemClick(1)}
         />
       </div>

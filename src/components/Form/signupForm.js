@@ -1,8 +1,8 @@
 "use client";
-import { useState } from 'react';
+import { useState } from "react";
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
-import Button from '../Button/Button';
-import ButtonBorder from '../Button/ButtonBorder';
+import Button from "../Button/Button";
+import ButtonBorder from "../Button/ButtonBorder";
 
 const SignupForm = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,7 +12,7 @@ const SignupForm = () => {
   };
 
   return (
-    <div className='flex flex-col gap-6'>
+    <div className="flex flex-col gap-6">
       <form className="flex flex-col gap-5">
         <h1 className="font-poppins font-bold text-4xl">Register</h1>
         <input
@@ -58,14 +58,14 @@ const SignupForm = () => {
           </button>
         </div>
       </form>
-      <Button onClick='' >Sign Up</Button>
+      <Button onClick="" >Sign Up</Button>
       <div className="flex flex-row items-center gap-4">
-        <input name='accept' type="checkbox" required/>
+        <input name="accept" type="checkbox" required/>
         <p className="text-grey2">Accept terms and condition</p>
       </div>
       <div className="w-full border border-[#D8D8D8]"></div>
       <p className="text-grey2 text-center">Already have an account?</p>
-      <ButtonBorder href='/sign-in'>Sign In</ButtonBorder>
+      <ButtonBorder href="/sign-in">Sign In</ButtonBorder>
     </div>
   );
 };

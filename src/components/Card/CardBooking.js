@@ -25,7 +25,7 @@ const CardBooking = () => {
           <p className="text-[#7A7A7A]">Status</p>
           <p className="bg-[#FF7F23] text-white py-2 px-4 rounded-lg">Waiting for payment</p>
         </div>
-        <Link href='/' className="flex items-center gap-2 text-primary">
+        <Link href="/" className="flex items-center gap-2 text-primary">
           <p className="text-lg">View Details</p>
           <MdKeyboardArrowDown size={32} />
         </Link>

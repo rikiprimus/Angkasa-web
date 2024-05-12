@@ -22,12 +22,12 @@ const Trending = () => {
         {TrendLists.map((item, index) => (
           <div key={index}>
             <TrendingCard 
-              href='/'
-              image='/assets/bg-home.jpg'
-              number='15'
-              plane='Airlines'
-              province='Tokyo'
-              country='Japan'
+              href="/"
+              image="/assets/bg-home.jpg"
+              number="15"
+              plane="Airlines"
+              province="Tokyo"
+              country="Japan"
             />
           </div>
         ))}
