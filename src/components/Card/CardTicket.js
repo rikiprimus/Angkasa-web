@@ -5,6 +5,7 @@ import { BsFillSuitcaseFill } from "react-icons/bs";
 import { FaHamburger, FaWifi } from "react-icons/fa";
 import { FaPlaneDeparture } from "react-icons/fa6";
 import Button from "../Button/Button";
+import ButtonLink from "../Button/ButtonLink";
 
 const CardTicket = () => {
   return (
@@ -44,7 +45,7 @@ const CardTicket = () => {
           $214,00 <span className="text-[#979797]">/pax</span>
         </p>
         {/* button  */}
-        <Button>Select</Button>
+        <ButtonLink href="/contact-person" >Select</ButtonLink>
       </div>
       {/* three  */}
       <div className="flex items-center gap-3 font-bold text-primary">

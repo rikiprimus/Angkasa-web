@@ -6,6 +6,7 @@ import { IoIosSearch, bar } from "react-icons/io";
 import { FiAlignLeft, FiX } from "react-icons/fi";
 import { usePathname } from "next/navigation"
 import { useState } from "react";
+import ButtonLink from "../Button/ButtonLink";
 
 const Navbar = () => {
   const pathname = usePathname()
@@ -19,7 +20,7 @@ const Navbar = () => {
     <div className="relative p-7 md:px-20 md:py-10">
       {/* Desktop  */}
       <div className="hidden md:flex md:flex-row justify-between p-7 md:px-0 md:py-10">
-        <div className="flex flex-row items-center gap-4">
+        <Link href="/" className="flex flex-row items-center gap-4">
           <Image 
             src="/assets/logo.jpg"
             alt="Ankasa Header Logo"
@@ -28,7 +29,7 @@ const Navbar = () => {
             priority
           />
           <p className="font-poppins font-bold text-2xl">Ankasa</p>
-        </div>
+        </Link>
         <div className="flex items-start gap-8">
           <div className="flex items-center bg-boxInput rounded-lg px-4 py-2">
             <IoIosSearch size={25} color="#6B6B6B" />
@@ -40,7 +41,7 @@ const Navbar = () => {
               <div className="w-8 h-1 rounded-full bg-primary"></div>
             ) : null}
           </Link>
-          <Link href="/" className="flex flex-col items-center">
+          <Link href="/my-booking" className="flex flex-col items-center">
             <p className="font-semibold text-lg p-4">My Booking</p>
             {pathname === "/my-booking" ? (
               <div className="w-8 h-1 rounded-full bg-primary"></div>
@@ -48,7 +49,7 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="w-[150px] flex items-center justify-center">
-          <Button>Sign Up</Button>
+          <ButtonLink href="/sign-up">Sign Up</ButtonLink>
         </div>
       </div>
 
@@ -92,7 +93,7 @@ const Navbar = () => {
                 <div className="w-8 h-1 rounded-full bg-primary"></div>
               ) : null}
             </Link>
-            <Button>Sign Up</Button>
+            <ButtonLink href="/sign-up">Sign Up</ButtonLink>
           </div>
         </div>
       ) : null}

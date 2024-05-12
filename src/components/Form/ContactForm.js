@@ -3,6 +3,7 @@ import Button from "../Button/Button";
 import InputText from "../Input/Input";
 import ToggleSwitch from "../Input/ToggleSwitch";
 import { IoIosArrowDown } from "react-icons/io";
+import ButtonLink from "../Button/ButtonLink";
 
 const ContactForm = () => {
   return (
@@ -87,7 +88,7 @@ const ContactForm = () => {
             <h1 className="">Get travel compensation up to $ 10.000,00</h1>
           </div>
         </div>
-        <Button>Proceed to Payment</Button>
+        <ButtonLink href="/payment/method">Proceed to Payment</ButtonLink>
       </form>
     </div>
   );

@@ -51,7 +51,7 @@ const SigninForm = () => {
       </form>
       <Button onClick="" >Sign In</Button>
       <div className="flex flex-col items-center gap-2">
-        <p className="text-grey2">Accept terms and condition</p>
+        <p className="text-grey2">Did you forgot your password?</p>
         <Link href="/forgot-password" className="text-primary underline">Tap Here</Link>
       </div>
       <div className="w-full border border-[#D8D8D8]"></div>
