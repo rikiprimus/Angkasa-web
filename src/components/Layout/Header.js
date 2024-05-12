@@ -45,7 +45,7 @@ const Header = ({ value }) => {
   };
 
   return (
-    <div className="relative -z-20 w-full h-[180px] flex items-center justify-between bg-primary rounded-b-[40px] overflow-hidden p-5 md:px-20">
+    <div className="relative -z-20 w-full h-[250px] flex items-center justify-between bg-primary rounded-b-[40px] overflow-hidden p-5 md:px-20">
       <FaPlaneDeparture
         size={250}
         color="#41A4FF"
