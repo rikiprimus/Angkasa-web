@@ -101,14 +101,14 @@ const MethodForm = ({ children }) => {
       <AccordionItem
         title="Paypal"
         content={contentPaypal()}
-        icon={<Image src="/assets/paypal.png" width={20} height={20} />}
+        icon={<Image src="/assets/paypal.png" width={20} height={20} alt="paypal" />}
         isOpen={openIndex === 0}
         onClick={() => handleItemClick(0)}
       />
       <AccordionItem
         title="Debit Card"
         content={contentPaypal()}
-        icon={<Image src="/assets/credit-card.png" width={150} height={20} />}
+        icon={<Image src="/assets/credit-card.png" width={150} height={20} alt="credit-card" />}
         isOpen={openIndex === 1}
         onClick={() => handleItemClick(1)}
       />

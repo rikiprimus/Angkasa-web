@@ -1,6 +1,5 @@
 import Image from "next/image";
-import SignUpForm from '@/components/Form/signupForm';
-import Barcodes from "@/components/Others/Barcodes";
+import SignupForm from "@/components/Form/signupForm";
 
 const SignUp = () => {
   return (
@@ -26,7 +25,7 @@ const SignUp = () => {
           <p className="font-poppins font-bold text-2xl">Ankasa</p>
         </div>
         <div>
-          <SignUpForm />
+          <SignupForm />
         </div>
       </div>
     </main>

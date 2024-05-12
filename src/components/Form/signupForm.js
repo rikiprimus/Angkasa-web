@@ -5,7 +5,7 @@ import Button from '../Button/Button';
 import ButtonBorder from '../Button/ButtonBorder';
 import Link from 'next/link';
 
-const signupForm = () => {
+const SignupForm = () => {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -71,4 +71,4 @@ const signupForm = () => {
   );
 };
 
-export default signupForm;
+export default SignupForm;

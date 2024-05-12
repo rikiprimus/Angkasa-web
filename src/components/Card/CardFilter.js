@@ -63,7 +63,6 @@ const CardFilter = () => {
           icon={<IoIosArrowUp />}
           isOpen={openIndex === 1}
           color='white'
-          color='white'
           onClick={() => handleItemClick(1)}
         />
         <AccordionItem
