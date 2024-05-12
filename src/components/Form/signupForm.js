@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { IoEyeOutline, IoEyeOffOutline } from "react-icons/io5";
 import Button from '../Button/Button';
 import ButtonBorder from '../Button/ButtonBorder';
-import Link from 'next/link';
 
 const SignupForm = () => {
   const [showPassword, setShowPassword] = useState(false);
