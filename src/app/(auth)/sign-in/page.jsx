@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SignInForm from '@/components/Form/SigninForm';
+import SigninForm from "@/components/Form/signinForm";
 
 const SignIn = () => {
   return (
@@ -25,7 +25,7 @@ const SignIn = () => {
           <p className="font-poppins font-bold text-2xl">Ankasa</p>
         </div>
         <div>
-          <SignInForm />
+          <SigninForm />
         </div>
       </div>
     </main>
