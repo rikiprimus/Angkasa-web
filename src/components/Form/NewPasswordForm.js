@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { login } from "@/lib/api/auth";
+import { getEmail, newpassword } from '@/lib/api/auth';
 import Link from "next/link";
 // from component 
 import ButtonBorder from "../Button/ButtonBorder";
@@ -10,14 +10,16 @@ import Alert from "../Others/Alert";
 import InputText from "../Input/InputText";
 import InputPassword from "../Input/InputPassword";
 
-const SigninForm = () => {
+const NewPasswordForm = ({id}) => {
   const router = useRouter();
   // input data from form 
   const [credentials, setCredentials] = useState({
-    email: "",
-    password: "",
+    request_code: id,
+    email: getEmail(),
+    new_password: "",
   });
   // setup for error
+  const [confirm_password, setConfirm_password] = useState('');
   const [error, setError] = useState("");
 
   const handleChange = (e) => {
@@ -32,19 +34,18 @@ const SigninForm = () => {
     e.preventDefault();
     setError("");
     // Validasi input
-    const { email, password } = credentials;
-    if (!email || !password) {
+    const { new_password } = credentials;
+    if (!confirm_password || !new_password) {
       setError("Please fill out all fields.");
       return;
     }
-    // Program login
     try {
-      const result = await login(credentials);
+      const result = await newpassword(credentials);
       if (result.success) {
-        console.log("Login berhasil:", result.data);
-        router.push("/home")
+        console.log("Change Password berhasil:", result.data);
+        router.push("/sign-in")
       } else {
-        console.error("Login gagal:", result.message);
+        console.error("Change Password gagal:", result.message);
         setError(result.message);
       }
     } catch (error) {
@@ -52,43 +53,33 @@ const SigninForm = () => {
       setError(error.message);
     }
   };
+
   // variable for button disabled 
-  const isFormValid = credentials.email && credentials.password;
+  const isFormValid = confirm_password && credentials.new_password;
 
   return (
     <div className="flex flex-col gap-6">
-      {/* form input  */}
       <form className="flex flex-col gap-5">
-        <h1 className="font-poppins font-bold text-4xl">Login</h1>
+        <h1 className="font-poppins font-bold text-4xl">Change Password</h1>
         <Alert error={error} />
-        <InputText 
-          name={"email"}
-          placeholder={"Email"}
-          value={credentials.email}
+        <InputPassword 
+          name={"new_password"}
+          placeholder={"New Password"}
+          value={credentials.new_password}
           onChange={handleChange}
         />
         <InputPassword 
-          name={"password"}
-          placeholder={"Password"}
-          value={credentials.password}
-          onChange={handleChange}
+          name={"confirm_password"}
+          placeholder={"Confirm Password"}
+          value={confirm_password}
+          onChange={(e) => setConfirm_password(e.target.value)}
         />
         <Button onClick={handleSubmit} disabled={!isFormValid}>
-          Sign In
+          Change Password
         </Button>
       </form>
-      {/* button forget password  */}
-      <div className="flex flex-col items-center gap-2">
-        <p className="text-grey2">Did you forget your password?</p>
-        <Link href="/forgot-password" className="text-primary underline">
-          Tap Here
-        </Link>
-      </div>
-      <div className="w-full border border-[#D8D8D8]"></div>
-      <p className="text-grey2 text-center">You don't have an account?</p>
-      <ButtonBorder href="/sign-up">Sign Up</ButtonBorder>
     </div>
-  );
-};
+  )
+}
 
-export default SigninForm;
+export default NewPasswordForm

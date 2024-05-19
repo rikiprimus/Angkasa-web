@@ -1,7 +1,10 @@
+"use client";
+import NewPasswordForm from "@/components/Form/NewPasswordForm";
+import React from "react";
 import Image from "next/image";
-import SigninForm from "@/components/Form/SigninForm";
+import { useRouter } from "next/navigation";
 
-const SignIn = () => {
+const page = ({ params }) => {
   return (
     <main className="md:flex md:flex-row bg-white">
       <div className="hidden items-center justify-center bg-primary md:w-3/4 md:flex md:h-[919px]">
@@ -29,11 +32,11 @@ const SignIn = () => {
           <p className="font-poppins font-bold text-2xl">Ankasa</p>
         </div>
         <div>
-          <SigninForm />
+          <NewPasswordForm id={params.id} />
         </div>
       </div>
     </main>
   );
 };
 
-export default SignIn;
+export default page;

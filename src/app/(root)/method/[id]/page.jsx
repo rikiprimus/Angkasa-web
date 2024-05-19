@@ -3,7 +3,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { LuClock9 } from "react-icons/lu";
 import MethodForm from "@/components/Form/methodForm";
 
-export const Method = () => {
+export const Method = ({params}) => {
   return (
     <div className="w-full h-[900px] flex items-center justify-center bg-primary mb-32">
       <div className="w-[1248px] h-[650px] hidden md:flex flex-row justify-center gap-3 bg-white p-32">

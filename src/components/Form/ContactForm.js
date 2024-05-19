@@ -1,36 +1,103 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Button from "../Button/Button";
-import InputText from "../Input/Input";
+import InputText from "../Input/InputText";
 import ToggleSwitch from "../Input/ToggleSwitch";
 import { IoIosArrowDown } from "react-icons/io";
 import ButtonLink from "../Button/ButtonLink";
+import DropDown from "../Dropdown/Dropdown";
+import { fetchDataUser } from "@/lib/api/api";
+import { getToken } from "@/lib/api/auth";
+import { useRouter } from 'next/navigation';
 
-const ContactForm = () => {
+const ContactForm = ({id}) => {
+  const router = useRouter();
+  const [userData, setUserData] = useState(null);
+  const [credentials, setCredentials] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+  const [token, setToken] = useState(null);
+
+  useEffect(() => {
+    const savedToken = getToken();
+    if (savedToken) {
+      const fetchData = async () => {
+        const result = await fetchDataUser(savedToken);
+        setUserData(result.data);
+      };
+      fetchData();
+    } else {
+      router.push('/login'); 
+    }
+  }, [router]);
+
+  useEffect(() => {
+    if (userData) {
+      setCredentials((prevCredentials) => ({
+        ...prevCredentials,
+        name: userData.name || "",
+        email: userData.email || "",
+      }));
+    }
+  }, [userData]);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setCredentials((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  // Event handler untuk memperbarui nilai input dan memformat nomor telepon
+  const handlePhoneChange = (e) => {
+    let input = e.target.value;
+    input = input.replace(/\D/g, "");
+
+    let formattedInput = "";
+    for (let i = 0; i < input.length && i < 13; i++) { // Ensure the length is not more than 13
+      if (i > 0 && i % 4 === 0) {
+        formattedInput += "-";
+      }
+      formattedInput += input[i];
+    }
+    setCredentials((prevState) => ({
+      ...prevState,
+      phone: formattedInput,
+    }));
+  };
+
+  const genre = ["Men", "Women"];
+  const nation = ["Indonesia", "Malaysia", "Singapore", "Thailand"];
+
   return (
     <div>
       <form className="flex flex-col gap-16">
         {/* first  */}
         <div className="flex flex-col gap-4 bg-white rounded-lg p-8">
           <InputText
-            type="text"
             label="Full Name"
-            name="fullname"
+            name="name"
             placeholder="Full Name"
-            // onChange={}
+            value={credentials.name}
+            onChange={handleChange}
           />
           <InputText
-            type="email"
             label="Email"
             name="email"
             placeholder="Email"
-            // onChange={}
+            value={credentials.email}
+            onChange={handleChange}
           />
           <InputText
-            type="number"
+            type="tel"
             label="Phone Number"
             name="phone"
             placeholder="0000-0000-0000"
-            // onChange={}
+            value={credentials.phone}
+            onChange={handlePhoneChange}
           />
         </div>
         {/* two  */}
@@ -46,13 +113,7 @@ const ContactForm = () => {
                 <ToggleSwitch />
               </span>
             </div>
-            <InputText
-              type="text"
-              label="Title"
-              name="fullname"
-              placeholder="Full Name"
-              // onChange={}
-            />
+            <DropDown title="Mr." list={genre} />
             <InputText
               type="text"
               label="Full Name"
@@ -60,13 +121,7 @@ const ContactForm = () => {
               placeholder="Full Name"
               // onChange={}
             />
-            <InputText
-              type="text"
-              label="Nationality"
-              name="fullname"
-              placeholder="Full Name"
-              // onChange={}
-            />
+            <DropDown title="Nation" list={nation} />
           </div>
         </div>
         {/* three  */}
@@ -88,7 +143,7 @@ const ContactForm = () => {
             <h1 className="">Get travel compensation up to $ 10.000,00</h1>
           </div>
         </div>
-        <ButtonLink href="/payment/method">Proceed to Payment</ButtonLink>
+        <ButtonLink href={`/method/${id}`}>Proceed to Payment</ButtonLink>
       </form>
     </div>
   );

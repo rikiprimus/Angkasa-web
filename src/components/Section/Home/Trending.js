@@ -1,5 +1,5 @@
 "use client";
-import TrendingCard from "@/components/Section/Home/TrendingCard";
+import TrendingCard from "@/components/Card/TrendingCard";
 import Link from "next/link";
 import TrendLists from "../../../lib/trendinglist.json"
 

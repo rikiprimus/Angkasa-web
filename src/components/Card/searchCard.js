@@ -1,4 +1,5 @@
 "use client"
+import React from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { FaArrowRightArrowLeft, FaPlaneDeparture, FaArrowRightLong } from "react-icons/fa6";
 import { TbReload } from "react-icons/tb";
@@ -29,12 +30,16 @@ const SearchCard = () => {
     },
   ]
 
-  const CustomInputDate = ({ value, onClick }) => (
-    <button className="w-full flex justify-between font-semibold border-2 border-[#DDDDDD] p-4 rounded-xl" onClick={onClick}>
+  const CustomInputDate = React.forwardRef(({ value, onClick }, ref) => (
+    <button
+      ref={ref}
+      className="w-full flex justify-between font-semibold border-2 border-[#DDDDDD] p-4 rounded-xl"
+      onClick={onClick}
+    >
       {value}
       <IoIosArrowForward size={25} color="#2395FF" />
     </button>
-  );
+  ));
 
   return (
     <div className="w-[400px] flex flex-col gap-5 bg-white p-7 shadow-2xl rounded-2xl">

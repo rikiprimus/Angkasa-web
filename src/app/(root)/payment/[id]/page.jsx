@@ -4,7 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaPlaneDeparture, FaRegCircleCheck } from "react-icons/fa6";
 import ContactForm from "@/components/Form/ContactForm";
 
-const ContactPerson = () => {
+const Payment = ({params}) => {
   return (
     <div className="relative bg-[#F5F6FA]">
       {/* header  */}
@@ -16,7 +16,7 @@ const ContactPerson = () => {
         {/* left  */}
         <div className="w-full flex flex-col gap-8">
           <h1 className="font-bold text-white text-2xl">Contact Person Details</h1>
-          <ContactForm />
+          <ContactForm id={params.id} />
         </div>
         {/* right  */}
         <div className="w-[600px] flex flex-col gap-8">
@@ -78,4 +78,4 @@ const ContactPerson = () => {
   );
 };
 
-export default ContactPerson;
+export default Payment;

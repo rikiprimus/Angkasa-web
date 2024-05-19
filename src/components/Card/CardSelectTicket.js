@@ -1,8 +1,13 @@
 "use client"
 import { FaArrowRightArrowLeft } from "react-icons/fa6";
 import CardTicket from "./CardTicket";
+import { useFetch } from "@/lib/api/api";
 
 const CardSelectTicket = () => {
+  const { data, error, isLoading } = useFetch("/airlines/flight");
+  console.log(data?.data)
+  const TicketItem = data?.data
+
   return (
     <div className="w-full flex flex-col gap-8 p-5">
       {/* title */}
@@ -18,13 +23,23 @@ const CardSelectTicket = () => {
       </div>
 
       <div className="flex flex-col gap-10">
-        <CardTicket />
-        <CardTicket />
-        <CardTicket />
-        <CardTicket />
-        <CardTicket />
-        <CardTicket />
-        <CardTicket />
+        {TicketItem?.map((item, index)=>(
+          <CardTicket 
+            key={index}
+            id={item.code}
+            image={item?.photo} 
+            name={item?.name}
+            takeoff={item?.takeoff}
+            landing={item?.landing}
+            interval_time={item?.interval_time}
+            transit={item.transit}
+            from={item?.from}
+            to={item?.to}
+            hours={item?.interval_time}
+            price={item?.price}
+            facility={item?.facilities}
+          />
+        ))}
       </div>
     </div>
   )

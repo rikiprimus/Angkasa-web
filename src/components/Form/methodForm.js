@@ -5,6 +5,7 @@ import { FaRegCreditCard, FaLock } from "react-icons/fa6";
 import PaymentInput from "../Input/PaymentInput";
 import AccordionItem from "../Accordion/AccordionItem";
 import Accordion from "../Accordion/Accordion";
+import ButtonLink from "../Button/ButtonLink";
 
 const MethodForm = ({ children }) => {
   const [openIndex, setOpenIndex] = useState(1);
@@ -54,7 +55,7 @@ const MethodForm = ({ children }) => {
   };
 
   const contentPaypal = () => {
-    return(
+    return (
       <div className="flex flex-col gap-4">
         <PaymentInput
           type="text"
@@ -76,7 +77,7 @@ const MethodForm = ({ children }) => {
             maxLength=""
             icon={<FaLock size={18} />}
           />
-          <PaymentInput 
+          <PaymentInput
             type="text"
             label="CVC/CVV"
             value={cvv}
@@ -93,26 +94,48 @@ const MethodForm = ({ children }) => {
           </p>
         </div>
       </div>
-    )
-  }
+    );
+  };
+
+  const methodItem = [
+    {
+      title: "Paypal",
+      icon: (
+        <Image src="/assets/paypal.png" width={20} height={20} alt="paypal" />
+      ),
+      content: contentPaypal(),
+    },
+    {
+      title: "Credit Card",
+      icon: (
+        <Image
+          src="/assets/credit-card.png"
+          width={150}
+          height={20}
+          alt="credit-card"
+        />
+      ),
+      content: contentPaypal(),
+    },
+  ];
 
   return (
-    <Accordion>
-      <AccordionItem
-        title="Paypal"
-        content={contentPaypal()}
-        icon={<Image src="/assets/paypal.png" width={20} height={20} alt="paypal" />}
-        isOpen={openIndex === 0}
-        onClick={() => handleItemClick(0)}
-      />
-      <AccordionItem
-        title="Debit Card"
-        content={contentPaypal()}
-        icon={<Image src="/assets/credit-card.png" width={150} height={20} alt="credit-card" />}
-        isOpen={openIndex === 1}
-        onClick={() => handleItemClick(1)}
-      />
-    </Accordion>
+    <div className="flex flex-col gap-3">
+      <Accordion>
+        {methodItem.map((item, index) => (
+          <AccordionItem
+            key={index}
+            title={item.title}
+            content={item.content}
+            icon={item.icon}
+            color="boxInput"
+            isOpen={openIndex === index}
+            onClick={() => handleItemClick(index)}
+          />
+        ))}
+      </Accordion>
+      <ButtonLink href={"/my-booking"}>Submit</ButtonLink>
+    </div>
   );
 };
 
