@@ -1,4 +1,4 @@
-import SearchCard from "@/components/Card/SearchCard";
+import Search from "@/components/Card/Search";
 import { TopDestination } from "@/components/Section/Home/TopDestination";
 import Trending from "@/components/Section/Home/Trending";
 import Image from "next/image";
@@ -9,7 +9,7 @@ export default function Home() {
       {/* section 1  */}
       <section className="relative w-full h-[800px] md:h-[1015px]">
         <div className="absolute top-20 md:right-[250px] xl:right-[590px] z-30">
-          <SearchCard />
+          <Search />
         </div>
         {/* title  */}
         <div className="flex flex-col gap-4 md:gap-8 py-20 md:py-28">

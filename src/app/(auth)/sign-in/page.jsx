@@ -1,4 +1,4 @@
-import SigninForm from "@/components/Form/SigninForm";
+import FormSign from "@/components/Form/FormSign";
 import Image from "next/image";
 
 const SignIn = () => {
@@ -29,7 +29,7 @@ const SignIn = () => {
           <p className="font-poppins font-bold text-2xl">Ankasa</p>
         </div>
         <div>
-          <SigninForm />
+          <FormSign />
         </div>
       </div>
     </main>
