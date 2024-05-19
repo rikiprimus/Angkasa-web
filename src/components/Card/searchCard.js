@@ -11,25 +11,6 @@ import "react-datepicker/dist/react-datepicker.css";
 const SearchCard = () => {
   const [startDate, setStartDate] = useState(new Date());
 
-  const dummyManyData = [
-    {
-      id: 1,
-      value: 1
-    },
-    {
-      id: 2,
-      value: 2
-    },
-    {
-      id: 3,
-      value: 3
-    },
-    {
-      id: 4,
-      value: 4
-    },
-  ]
-
   const CustomInputDate = React.forwardRef(({ value, onClick }, ref) => (
     <button
       ref={ref}

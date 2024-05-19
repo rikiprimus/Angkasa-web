@@ -1,4 +1,3 @@
-
 import SearchCard from "@/components/Card/SearchCard";
 import { TopDestination } from "@/components/Section/Home/TopDestination";
 import Trending from "@/components/Section/Home/Trending";
