@@ -26,6 +26,7 @@ const Navbar = () => {
   };
 
   const token = getToken();
+  console.log(token)
 
   return (
     <div className="relative p-7 md:px-20 md:py-10">
@@ -63,7 +64,7 @@ const Navbar = () => {
             ) : null}
           </Link>
         </div>
-        {token !== '' ? (
+        {token ? (
           <div className="flex items-center justify-center gap-10">
             <Link href="/home">
               <GoMail size={30} color="#595959" />

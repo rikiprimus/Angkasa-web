@@ -2,7 +2,6 @@
 import NewPasswordForm from "@/components/Form/NewPasswordForm";
 import React from "react";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
 
 const page = ({ params }) => {
   return (

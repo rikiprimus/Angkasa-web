@@ -9,8 +9,8 @@ import Alert from "../Others/Alert";
 import InputText from "../Input/InputText";
 import InputPassword from "../Input/InputPassword";
 
-const forgotpasswordForm = () => {
-  const router = useRouter();
+const ForgotPasswordForm = () => {
+  // const router = useRouter();
   // input data from form 
   const [credentials, setCredentials] = useState({
     email: "",
@@ -74,4 +74,4 @@ const forgotpasswordForm = () => {
   );
 };
 
-export default forgotpasswordForm;
+export default ForgotPasswordForm;
