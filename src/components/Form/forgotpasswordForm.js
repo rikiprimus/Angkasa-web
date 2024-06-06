@@ -11,7 +11,6 @@ import InputPassword from "../Input/InputPassword";
 
 const ForgotPasswordForm = () => {
   // const router = useRouter();
-  // input data from form 
   const [credentials, setCredentials] = useState({
     email: "",
     fe_url: "http://localhost:3000/new-password",
@@ -41,9 +40,9 @@ const ForgotPasswordForm = () => {
     try {
       const result = await forgotpassword(credentials);
       if (result.success) {
-        console.log("Forgot Password berhasil:", result.data);
+        console.log("Forgot Password berhasil:", result?.data);
       } else {
-        console.error("Forgot Password gagal:", result.message);
+        console.error("Forgot Password gagal:", result?.message);
       }
     } catch (error) {
       console.error("Terjadi kesalahan:", error.message);

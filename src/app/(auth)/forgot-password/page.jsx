@@ -1,5 +1,5 @@
 import Image from "next/image";
-import ForgotPasswordForm from "@/components/Form/forgotpasswordForm";
+import ForgotPasswordForm from "@/components/Form/ForgotPasswordForm";
 
 const page = () => {
   return (
