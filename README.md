@@ -152,8 +152,8 @@ Contributions that make the open source community the best place to learn and cr
 
 ## Related Project
 
-- [`Peworld Hirejob Web Demo`](https://angkasa-app.vercel.app/)
-- [`Peworld Hirejob Web Frontend Repository`](https://github.com/rikiprimus/angkasa-app)
-- [`Peworld Hirejob Web Backend Repository`](https://github.com/rikiprimus/bookflight)
+- [`Angkasa Web Demo`](https://angkasa-app.vercel.app/)
+- [`Angkasa Web Frontend Repository`](https://github.com/rikiprimus/angkasa-app)
+- [`Angkasa Web Backend Repository`](https://github.com/rikiprimus/bookflight)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
