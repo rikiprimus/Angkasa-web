@@ -157,3 +157,12 @@ Contributions that make the open source community the best place to learn and cr
 - [`Angkasa Web Backend Repository`](https://github.com/rikiprimus/bookflight)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Contact
+
+Contributors names and contact info
+
+* AUTHOR
+  * Ricky Primus Saputra [@RickyPrimusSaputra](https://github.com/rikiprimus)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
