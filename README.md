@@ -114,24 +114,24 @@ npm run dev
             <td>New Password Page</td>
         </tr>
         <tr>
-            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/b7nh5vhr7izwlgp5of8r.png" alt="Landing Page" width=100%></td>
-            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/yulm2ptugawk7hcpctoy.png" alt="Home Recruiter" width=100%/></td>
+            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/b7nh5vhr7izwlgp5of8r.png" alt="Forgot Password" width=100%></td>
+            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/yulm2ptugawk7hcpctoy.png" alt="New Password" width=100%/></td>
         </tr>
         <tr>
             <td>Landing Page</td>
             <td>Home Page</td>
         </tr>
         <tr>
-            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/ereq0gtmjlkdk01qww17.png" alt="Edit Profile Pekerja" width=100%></td>
-            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/fe7mxl78tiuvdxxjblxv.png" alt="Profile Talent" width=100%/></td>
+            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/ereq0gtmjlkdk01qww17.png" alt="Landing" width=100%></td>
+            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/fe7mxl78tiuvdxxjblxv.png" alt="Home" width=100%/></td>
         </tr>
         <tr>
             <td>Booking Page</td>
             <td>Edit Profile Page</td>
         </tr>
         <tr>
-            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/j9voiar8jrpro2wfjkyd.png" alt="Hiring" width=100%></td>
-            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/g6p5nh9fud6pr0j67r7y.png" alt="Chat" width=100%/></td>
+            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/j9voiar8jrpro2wfjkyd.png" alt="Booking" width=100%></td>
+            <td><image src="https://res.cloudinary.com/da1ilmcj9/image/upload/v1717660203/SS%20angkasa%20app/g6p5nh9fud6pr0j67r7y.png" alt="Edit Profile" width=100%/></td>
         </tr>
     </table>  
 </p>
